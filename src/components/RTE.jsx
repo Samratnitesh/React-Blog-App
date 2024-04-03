@@ -1,24 +1,25 @@
-import React from "react";
-import { Editor } from "@tinymce/tinymce-react";
-import { Controller } from "react-hook-form";
+import React from 'react'
+import {Editor } from '@tinymce/tinymce-react';
+import {Controller } from 'react-hook-form';
 
-// This is Rich Text Editor for providing the editor in the web application
 
-export default function RTE({ name, control, label, defaultValue = "" }) {
+export default function RTE({name, control, label, defaultValue =""}) {
   return (
-    <div className="w-full">
-      {label && <label className="inline-block mb-1 pl-1">{label}</label>}
-      <Controller
-        name={name || "content"}
-        control={control}
-        render={({ field: { onChange } }) => (
-          <Editor
-            initialValue="Default Value"
-            init={{
-              branding: false,
-              height: 500,
-              menubar: true,
-              plugins: [
+    <div className='w-full'> 
+    {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
+
+    <Controller
+    name={name || "content"}
+    control={control}
+    render={({field: {onChange}}) => (
+        <Editor
+        initialValue={defaultValue}
+        apiKey='qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc'
+        init={{
+            initialValue: defaultValue,
+            height: 500,
+            menubar: true,
+            plugins: [
                 "image",
                 "advlist",
                 "autolink",
@@ -39,16 +40,16 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                 "help",
                 "wordcount",
                 "anchor",
-              ],
-              toolbar:
-                "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
-              content_style:
-                "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-            }}
-            onEditorChange={onChange}
-          />
-        )}
-      />
-    </div>
-  );
+            ],
+            toolbar:
+            "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
+            content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
+        }}
+        onEditorChange={onChange}
+        />
+    )}
+    />
+
+     </div>
+  )
 }
