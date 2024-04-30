@@ -13,7 +13,7 @@ Hii :wave: Welcome
 
 **Installation:**
 To run Write Wave locally:
-1. Clone the repository: `git clone https://github.com/Samratnitesh/React-Blog-App`
+1. Clone the repository: `git clone https://github.com/Samratnitesh/Write-Wave`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Access the application at `http://localhost:3000`
