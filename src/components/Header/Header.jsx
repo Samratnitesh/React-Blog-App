@@ -39,9 +39,9 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-2 shadow bg-gray-500 sticky top-0 z-50 rounded-md'>
       <Container>
-        <nav className='flex'>
+        <nav className='flex backdrop-blur-sm'>
           <div className='mr-4'>
             <Link to='/'>
               <Logo width='70px'   />

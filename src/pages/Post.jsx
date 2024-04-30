@@ -61,7 +61,21 @@ export default function Post() {
                 <div className="browser-css">
                     {parse(post.content)}
                     </div>
+                
             </Container>
+            {/* <div className="col-md-6 my-10">
+                <form className="w-100">
+                    <div className="form-group mb-2">
+                        <textarea className="form-control" placeholder="comments here....."></textarea>
+                    </div>
+                    <div className="form-group d-flex mb-2 gap-2">
+                    <Button bgColor="bg-blue-500" className="mr-3">
+                                    Submit
+                                </Button>
+                    </div>
+                </form>
+            </div> */}
         </div>
+        
     ) : null;
 }
